@@ -1,27 +1,28 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import TrackLayer from './TrackLayer'
+import { colors } from '../Constants/colors';
 
 const PlayGrid = (
     // { loopArray }
     ) => {
 
         const trackOne = [
-            { color: "green" },
-            { color: "green" },
-            { color: "green" },
-            { color: "green" }
+            { color: colors.green },
+            { color: colors.green },
+            { color: colors.green },
+            { color: colors.green }
         ]
         const trackTwo = [
-            { color: "green" },
-            { color: "green" },
-            { color: "green" },
-            { color: "green" }
+            { color: colors.green },
+            { color: colors.green },
+            { color: colors.green },
+            { color: colors.green }
         ]
         const trackThree = [
-            { color: "green" },
-            { color: "yellow" },
-            { color: "red" },
+            { color: colors.green },
+            { color: colors.yellow },
+            { color: colors.red },
             { color: "white" }
         ]
         const trackFour = [

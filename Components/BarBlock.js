@@ -3,14 +3,13 @@ import { View, Text, StyleSheet } from 'react-native';
 
 
 const BarBlock = ({ bar, beat, trackNumber }) => {
-    const color = bar.color
     
 
-    const barBlockStyle = {
-        backgroundColor: color,
-    };
+    // const barBlockStyle = {
+    //     backgroundColor: bar.color,
+    // };
 
-    return ( <View style={[styles.barBlock, barBlockStyle]}>
+    return (<View style={[styles.barBlock, { backgroundColor: bar.color }]} >
             <Text style={styles.textStyle}>
                 Track {trackNumber}
             </Text>

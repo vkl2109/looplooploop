@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import { colors } from '../Constants/colors';
 
 const PlayButton = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -18,7 +19,7 @@ const PlayButton = () => {
             <View style={styles.iconContainer}>
                 <FontAwesome
                     name={isPlaying ? 'pause' : 'play'}
-                    size={30}
+                    size={40}
                     color="#FFFFFF"
                 />
             </View>
@@ -28,16 +29,16 @@ const PlayButton = () => {
 
 const styles = StyleSheet.create({
     playButton: {
-        width: 60,
-        height: 60,
-        borderRadius: 30,
-        backgroundColor: '#0D6CEB',
+        width: 80,
+        height: 80,
+        borderRadius: "100%",
+        backgroundColor: colors.green,
         justifyContent: 'center',
         alignItems: 'center',
     },
     iconContainer: {
-        width: 30,
-        height: 30,
+        width: 40,
+        height: 40,
         justifyContent: 'center',
         alignItems: 'center',
     },
