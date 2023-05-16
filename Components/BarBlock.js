@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const BarBlock = ({ bar, index }) => {
+
+const BarBlock = ({ bar, beat, trackNumber }) => {
     const color = bar.color
     
 
@@ -10,8 +11,11 @@ const BarBlock = ({ bar, index }) => {
     };
 
     return ( <View style={[styles.barBlock, barBlockStyle]}>
-            <Text>
-                {index}
+            <Text style={styles.textStyle}>
+                Track {trackNumber}
+            </Text>
+            <Text style={styles.textStyle}>
+                Beat {beat}
             </Text>
         </View>
     )
@@ -21,8 +25,12 @@ const styles = StyleSheet.create({
     barBlock: {
         flex: 1,
         width: '25%',
-        height: '25%',
+        height: '100%'
     },
+    textStyle: {
+        alignSelf: 'center',
+        justifyContent: 'center',
+    }
 });
 
 export default BarBlock
