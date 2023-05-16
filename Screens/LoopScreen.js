@@ -7,9 +7,12 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
-import PlayGrid from "../Components/PlayGrid";
-
 import { SafeAreaView } from 'react-native-safe-area-context';
+
+import PlayGrid from "../Components/PlayGrid";
+import PlayButton from "../Components/PlayButton";
+import RecordButton from "../Components/RecordButton";
+import ButtonBar from "../Components/ButtonBar";
 
 export default function LoopScreen () {
 
@@ -33,6 +36,10 @@ export default function LoopScreen () {
     <SafeAreaView style={styles.container}>
         <Text>Loop Screen</Text>
         <PlayGrid loopArray={tempLoopArray} />
+        <ButtonBar>
+          <RecordButton />
+          <PlayButton />
+        </ButtonBar>
     </SafeAreaView>
     )
 }
