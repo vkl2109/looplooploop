@@ -6,7 +6,7 @@ const Stack = createNativeStackNavigator();
 
 export default function AuthNavigator() {
   return (
-    <Stack.Navigator initialRouteName="Login">
+    <Stack.Navigator initialRouteName="LoopScreen">
       <Stack.Screen
         options={{ headerShown: false }}
         name="LoopScreen"
