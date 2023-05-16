@@ -7,12 +7,32 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from "react-native";
+import PlayGrid from "../Components/PlayGrid";
+
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function LoopScreen () {
+
+  const tempLoopArray = [
+    {color: "green"},
+    {color: "green"},
+    {color: "green"},
+    {color: "green"},
+    {color: "green"},
+    {color: "yellow"},
+    {color: "red"},
+    {color: "white"},
+    {},
+    {},
+    {},
+    {},
+    {},
+  ]
+
     return(
     <SafeAreaView style={styles.container}>
         <Text>Loop Screen</Text>
+        <PlayGrid loopArray={tempLoopArray} />
     </SafeAreaView>
     )
 }
