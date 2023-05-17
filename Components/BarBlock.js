@@ -3,16 +3,11 @@ import { View, Text, StyleSheet } from 'react-native';
 
 
 const BarBlock = ({ bar, beat, trackNumber }) => {
-    
-
-    // const barBlockStyle = {
-    //     backgroundColor: bar.color,
-    // };
 
     return (<View style={[styles.barBlock, { backgroundColor: bar.color }]} >
-            <Text style={styles.textStyle}>
+            {/* <Text style={styles.textStyle}>
                 {beat} / {trackNumber}
-            </Text>
+            </Text> */}
         </View>
     )
 };

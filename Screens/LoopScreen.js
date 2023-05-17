@@ -6,20 +6,26 @@ import {
   Image,
   TouchableWithoutFeedback,
   Keyboard,
+  Button,
 } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { colors } from "../Constants/colors";
 
 import PlayGrid from "../Components/PlayGrid";
 import PlayButton from "../Components/PlayButton";
 import RecordButton from "../Components/RecordButton";
 import ButtonBar from "../Components/ButtonBar";
-import { colors } from "../Constants/colors";
+import TitleDisplay from "../Components/TitleDisplay";
+import ExportButton from "../Components/ExportButton";
 
 export default function LoopScreen () {
 
     return(
     <SafeAreaView style={styles.container}>
-        <Text>Hi Vincent</Text>
+        <ButtonBar>
+          <TitleDisplay />
+          <ExportButton />
+        </ButtonBar>
         <PlayGrid />
         <ButtonBar>
           <RecordButton />
