@@ -1,15 +1,29 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import BarBlock from './BarBlock';
 
 const TrackLayer = ({ track, trackNumber }) => {
-    
-    
-    return <View style={styles.trackLayer}>
+    const [selected, setSelected] = useState(false);
+
+    const handlePress = () => {
+        setSelected(!selected);
+    };
+
+    return (
+        <TouchableOpacity
+            style={selected ? styles.selectedTrackLayer : styles.trackLayer}
+            onPress={handlePress}
+        >
             {track.map((bar, index) => (
-                <BarBlock bar={bar} trackNumber={trackNumber} beat={ index + 1 } key={index} />
+                <BarBlock
+                    bar={bar}
+                    trackNumber={trackNumber}
+                    beat={index + 1}
+                    key={index}
+                />
             ))}
-        </View>;
+        </TouchableOpacity>
+    );
 };
 
 const styles = StyleSheet.create({
@@ -17,6 +31,14 @@ const styles = StyleSheet.create({
         height: '25%',
         width: '100%',
         flexDirection: 'row',
+        zIndex: 5,
+    },
+    selectedTrackLayer: {
+        height: '25%',
+        width: '100%',
+        flexDirection: 'row',
+        borderWidth: 3,
+        borderColor: 'yellow',
     },
 });
 
