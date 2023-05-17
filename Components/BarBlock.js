@@ -1,11 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { colors } from '../Constants/colors';
 
 
 const BarBlock = ({ bar, beat, trackNumber }) => {
 
-    return (<View style={[styles.barBlock, { backgroundColor: bar.color }]} >
-            <Text style={styles.textStyle}>{beat} / {trackNumber}</Text>
+    let barColor = "white"
+
+    switch (bar.status){
+        case "play":
+            barColor = colors.green
+            break;
+        case "recording":
+            barColor = colors.red
+            break;
+        case "pause":
+            barColor = colors.yellow
+            break
+    } 
+
+    return (<View style={[styles.barBlock, { backgroundColor: barColor }]} >
+            {/* <Text style={styles.textStyle}>{beat} / {trackNumber}</Text> */}
         </View>
     )
 };

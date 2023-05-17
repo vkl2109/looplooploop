@@ -11,7 +11,7 @@ const ExportButton = ({ onPress }) => {
             onPress={onPress}
             activeOpacity={0.8}
         >
-            <AntDesign name="download" size={25} color="white" />
+            <AntDesign name="download" size={24} color="white" />
         </TouchableOpacity>
     );
 };
@@ -22,18 +22,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#007AFF',
         borderRadius: 8,
         paddingVertical: 10,
-        paddingHorizontal: 20,
+        paddingHorizontal: 10,
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    iconContainer: {
-        backgroundColor: '#007AFF',
-        width: 40,
-        height: 40,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+        marginBottom: 10,
 
+    }
 });
 
 export default ExportButton;
